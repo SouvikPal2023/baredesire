@@ -43,7 +43,7 @@ class DashboardController extends Controller
         $data['footer_categories'] = ProductCategory::where('level', '2')
         ->where('status','1')->get(); 
         $data['mainCategories'] = ProductCategory::with('children.children')->where('level','0')->where('status','1')
-       ->get();
+       ->get(); 
 
         $data['section1']= Home1Section::first();
         $data['section2']= Home2Section::first();
